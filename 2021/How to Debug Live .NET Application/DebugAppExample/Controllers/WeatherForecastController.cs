@@ -21,7 +21,7 @@ namespace DebugAppExample.Controllers
 
             if (rng.Next(0, 100) % 5 == 0)
             {
-                throw new ArgumentOutOfRangeException("This value should not be multiple of 5");
+                throw new ArgumentOutOfRangeException("Specified argument was out of range of valid values");
             }
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
