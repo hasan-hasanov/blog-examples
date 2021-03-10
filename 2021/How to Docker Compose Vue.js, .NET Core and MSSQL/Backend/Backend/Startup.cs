@@ -14,20 +14,22 @@ namespace Backend
         public Startup(IConfiguration configuration)
         {
             _configuration = new ConfigurationBuilder()
-              .AddJsonFile("appsettings.Development.json", optional: true)
               .AddJsonFile("appSettings.json", optional: true)
+              .AddJsonFile("appsettings.Development.json", optional: true)
               .AddEnvironmentVariables()
               .Build();
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+
             services.AddDbContext<PhoneBookContext>(options =>
             {
                 options.UseSqlServer(_configuration.GetConnectionString("PhoneBook"));
             });
+
+            services.AddCors();
 
             services.AddSwaggerGen(c =>
             {
@@ -38,6 +40,15 @@ namespace Backend
         public void Configure(IApplicationBuilder app, PhoneBookContext context)
         {
             app.UseHttpsRedirection();
+
+            // TODO: Fix this if we have a domain
+            app.UseCors(policy =>
+                policy
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .SetIsOriginAllowed(origin => true)
+                    .AllowCredentials());
+
             context.Database.Migrate();
 
             app.UseSwagger();
