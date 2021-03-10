@@ -1,4 +1,6 @@
 <template>
+  <h1 class="text-center mt-5">Cool Phone Book</h1>
+
   <div class="container mt-5">
     <table class="table table-dark">
       <thead>
@@ -32,7 +34,8 @@ export default defineComponent({
 
     onMounted(async () => {
       const url = `${process.env.VUE_APP_API_URL}/api/phone-book`;
-      phoneBookEntries.value = await fetch(url);
+      const response = await fetch(url);
+      phoneBookEntries.value = await response.json();
 
       console.log(url);
       console.log(phoneBookEntries.value);
