@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/2021/How to Docker Compose Vue.js, .NET Core and MSSQL/Backend/Backend/appSettings.Development.json
