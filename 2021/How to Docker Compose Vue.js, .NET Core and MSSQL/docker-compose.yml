@@ -1,4 +1,26 @@
 services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: qUgeyvYnOKyMy9HRpGMauKlJdsyq1QdIJUtp8Hz6HarKKCIiVm7m3ITHsBFQSMkEcrGXQy4FNHFX6zKq5NTzysbE0EVJnh3HZwl6DkAloQu7GQ1NZVVNnYEFpkAcxdun
+      ACCEPT_EULA: "Y"
+
+  phone-book-api:
+    image: phone-book-api
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Backend/Dockerfile
+    environment:
+      - ConnectionStrings__PhoneBook=Server=db;Database=PhoneBook;Trusted_Connection=False;User Id=sa;Password=qUgeyvYnOKyMy9HRpGMauKlJdsyq1QdIJUtp8Hz6HarKKCIiVm7m3ITHsBFQSMkEcrGXQy4FNHFX6zKq5NTzysbE0EVJnh3HZwl6DkAloQu7GQ1NZVVNnYEFpkAcxdun;MultipleActiveResultSets=true
+      - Logging__LogLevel__Default=Information
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
   phone-book-front-end:
     image: phone-book-front-end
     restart: unless-stopped
@@ -9,3 +31,5 @@ services:
         VUE_APP_API_URL: http://localhost:8080
     ports:
       - "8081:80"
+    depends_on:
+      - phone-book-api
