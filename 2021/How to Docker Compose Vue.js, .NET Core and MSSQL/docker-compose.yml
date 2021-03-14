@@ -1,0 +1,11 @@
+services:
+  phone-book-front-end:
+    image: phone-book-front-end
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./front-end/Dockerfile
+      args:
+        VUE_APP_API_URL: http://localhost:8080
+    ports:
+      - "8081:80"
