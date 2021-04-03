@@ -3,19 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func", "Func\Func.csproj", "{2E4E673B-74D5-4B19-9B38-1D86ADA66AE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Func", "Func\Func.csproj", "{2E4E673B-74D5-4B19-9B38-1D86ADA66AE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Action", "Action\Action.csproj", "{64551334-3FE5-42AD-80D5-A0FE203719A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Action", "Action\Action.csproj", "{64551334-3FE5-42AD-80D5-A0FE203719A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousDelegateMethods", "AnonymousDelegateMethods\AnonymousDelegateMethods.csproj", "{0FDD2DAD-F645-4566-A285-1E688BB55072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnonymousDelegateMethods", "AnonymousDelegateMethods\AnonymousDelegateMethods.csproj", "{0FDD2DAD-F645-4566-A285-1E688BB55072}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DelegateUseCases", "DelegateUseCases", "{3CEC404A-00E0-4950-AEAD-68FDF2030C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadraticEquationSolver", "QuadraticEquationSolver\QuadraticEquationSolver.csproj", "{AF1E6D64-6BBD-486E-99EF-B00AF1C2E7EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuadraticEquationSolver", "QuadraticEquationSolver\QuadraticEquationSolver.csproj", "{AF1E6D64-6BBD-486E-99EF-B00AF1C2E7EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delegate.csproj", "{4780815B-B0ED-40A7-B77E-9519C0B9392F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetryMechanism", "RetryMechanism\RetryMechanism.csproj", "{38E07802-DB5E-4264-8A16-8367F6A841D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegate", "Delegate\Delegate.csproj", "{4780815B-B0ED-40A7-B77E-9519C0B9392F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,17 +41,12 @@ Global
 		{4780815B-B0ED-40A7-B77E-9519C0B9392F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4780815B-B0ED-40A7-B77E-9519C0B9392F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4780815B-B0ED-40A7-B77E-9519C0B9392F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38E07802-DB5E-4264-8A16-8367F6A841D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38E07802-DB5E-4264-8A16-8367F6A841D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38E07802-DB5E-4264-8A16-8367F6A841D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38E07802-DB5E-4264-8A16-8367F6A841D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AF1E6D64-6BBD-486E-99EF-B00AF1C2E7EA} = {3CEC404A-00E0-4950-AEAD-68FDF2030C17}
-		{38E07802-DB5E-4264-8A16-8367F6A841D7} = {3CEC404A-00E0-4950-AEAD-68FDF2030C17}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA5B2D50-94B9-4247-942D-B3FAE709C10C}
